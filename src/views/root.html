@@ -11,7 +11,7 @@
 				<input ng-model="vm.search.name">
 			</md-input-container>
 		</md-list-item>
-		<md-list-item class="md-3-line" ng-repeat="item in vm.list">
+		<md-list-item class="md-3-line" ng-repeat="item in vm.list | filter: vm.search.name">
 	        <div class="md-list-item-text">
 	          <h3>{{item.name.first}}</h3>
 	          <h4>{{item.email}}</h4>
