@@ -3,14 +3,14 @@
 	angular.module('servicesApp', ['ngMaterial', 'ngRoute'])
 		.config(configuration);
 
-	function configuration($routeProvider, $locationProvider){
+	function configuration($routeProvider, redirect){
 
 		$routeProvider
 			.when('/', {
 				templateUrl: 'src/views/root.html',
 				controller: 'People as vm'
-			});
-			// $locationProvider.otherwise('/');
+			})
+			.otherwise({redirectTo: redirect});
 	}
 
 }());
